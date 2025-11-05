@@ -12,6 +12,7 @@
     --color-text-light: #e6e6e6;
     --color-subtitle-light: #999;
     --color-bg: #d9f2e5;
+    --block-bg-color: rgba(255,255,255,0.15);
     --color-link-hover: red;
     --max-width-main: 700px;
     --text-transform-body: lowercase;
@@ -28,14 +29,15 @@
 
 body {
 	color:#001405;
-	background-color: var(--color-bg);
+  background: radial-gradient(#9198e5, #a3caae);
+	/* background-color: var(--color-bg); */
 	margin:0;
 }
 
 h1 {
     text-transform: uppercase;
     color: #ffffff;
-    background-color: #001405;
+    background-color: var(--block-bg-color);
     margin: 0;
     padding: 15px;
 }
