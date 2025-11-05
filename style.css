@@ -42,7 +42,11 @@ h1 {
 }
 
 /* Hyperlinks */
-a {
+#name {
+  text-align: center;
+}
+
+#name a {
     color: var(--color-link);
     text-decoration: none;
     text-transform: var(--text-transform-link);
