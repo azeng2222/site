@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Backdrop Filter Demo</title>
+<style>
+body {
+    height: 100vh;
+    background: radial-gradient(#9198e5, #e66465);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* The hidden SVG defines the noise filter */
+svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.glass {
+    width: 300px;
+    height: 200px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: /*blur(10px)*/ url(#dialogNoise);
+    -webkit-backdrop-filter: blur(10px) url(#dialogNoise);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="glass">
+    <p>Frosted Glass + Noise</p>
+</div>
+
+<!-- Hidden SVG filter definition -->
+<svg>
+    <defs>
+        <filter id="dialogNoise">
+        <feTurbulence baseFrequency="1" numOctaves="4" stitchTiles="noStitch"></feTurbulence>
+        <feColorMatrix type="saturate" values="0"></feColorMatrix>
+        </filter>
+    </defs>
+</svg>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* All colors etc */
+:root {
+    --font-family-main: 'Roboto Mono', monospace;
+    --font-size-main: 1.2rem;
+    --font-size-nav-mobile: 2.4rem;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --color-text: #e6e6e6;
+    --color-subtitle: #999;
+    --color-text-dark: #111;
+    --color-subtitle-dark: #444;
+    --color-text-light: #e6e6e6;
+    --color-subtitle-light: #999;
+    --color-bg: #d9f2e5;
+    --color-link-hover: red;
+    --max-width-main: 700px;
+    --text-transform-body: lowercase;
+    --text-transform-h1: uppercase;
+    --text-transform-link: uppercase;
+    --text-transform-link-hover: lowercase;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --spacing-extra-large: 3rem;
+    --max-width-content: 60dvw;
+    --gallery-gap: calc(var(--spacing-small) * 2);
+}
+
+body {
+	color:#001405;
+	background-color: var(--color-bg);
+	margin:0;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #001405;
+    margin: 0;
+    padding: 15px;
+}
+
+/* Hyperlinks */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    text-transform: var(--text-transform-link);
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    text-transform: var(--text-transform-link-hover);
+    text-decoration: underline;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
