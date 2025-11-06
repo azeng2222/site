@@ -24,8 +24,18 @@ a img {
 </style>
 </head>
 <body>
+	<!-- svg filter for noise effect -->
+	 <svg style="position: absolute; width: 0; height: 0;">
+		<defs>
+			<filter id="noiseFilter">
+			<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
+			<feColorMatrix type="saturate" values="0"/>
+			</filter>
+		</defs>
+		</svg>
+
 	<main>
-		<h1 id="name"><a href="./index.html" class="name-link"> audrey zeng </a></h1>
+		<h1 id="name"><a href="./index.html" class="link"> audrey zeng </a></h1>
 
 		<!-- The sidebar
         <div class="sidebar">
