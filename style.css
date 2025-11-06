@@ -11,7 +11,7 @@ saved: #9198e5, #a3caae
     --font-family-main: 'Roboto Mono', monospace;
     --font-size-heading: 5rem;
     --font-size-subtitle: 1rem;
-    --font-size-subtitle-small: 0.5rem;
+    --font-size-subtitle-small: 0.75rem;
     --font-size-main: 1.2rem;
     --font-size-nav-mobile: 2.4rem;
     --font-weight-normal: 400;
@@ -57,44 +57,11 @@ body::after {
 .header {
   position: relative;
   /* font-family: "Garamond", Times, serif; */
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-family: "Arial";
   z-index: 1;
-}
-
-.main-sections {
-  width: max(50vw, 50vh);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  bottom: -50vh;
-}
-
-.main-sections h2 {
-  width: max(50vw, 50vh);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  margin: auto;
-}
-
-/* #engineering, #art{
-  width: max(30vw, 30vh);
-  display: flex;
-  justify-content: left;
-  bottom: 0vh;
-} */
-
-#engineering, #art {
-  display: inline-block; /* default behavior, ensures same line */
-  width: auto;
-  text-decoration: none;
-  color: var(--color-text-dark);
-  font-weight: 600;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
 }
 
 #name {
@@ -102,33 +69,41 @@ body::after {
   width: fit-content;
   text-transform: var(--text-transform-h1);
   color: var(--color-text-dark);
-  /* background-color: var(--block-bg-color); */
   border-radius: 30px;
   margin: 0px auto;
-  padding: 30px;
+  margin-top: 0.5em;
+  margin-bottom: 0.01em;
 }
 
 #subtitle {
-  position: relative;
-  /* font-family: "Garamond", Times, serif; */
+  font-family: "Garamond", Times, serif;
   font-family: "Arial";
   font-size: var(--font-size-subtitle);
   text-align: center;
   width: fit-content;
   color: var(--color-subtitle-dark);
-  /* background-color: var(--block-bg-color); */
   margin: 0px auto;
+  margin-top: 0;
   padding: 0px;
   z-index: 1;
 }
 
 #subtitle-less-imp {
-   position: relative;
-  /* font-family: "Garamond", Times, serif; */
+  font-family: "Garamond", Times, serif;
   font-size: var(--font-size-subtitle-small);
-  color: var(--color-subtitle-light);
-  /* background-color: var(--block-bg-color); */
-  padding: 30px;
+  color: var(--color-subtitle-dark);
+  z-index: 1;
+}
+
+.main-sections {
+  width: max(50vw, 50vh);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  bottom: -50vh;
   z-index: 1;
 }
 
