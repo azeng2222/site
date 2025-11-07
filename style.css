@@ -12,7 +12,8 @@ saved: #9198e5, #a3caae
     --font-size-heading: 5rem;
     --font-size-subtitle: 1.5rem;
     --font-size-subtitle-small: 1rem;
-    --font-size-main: 1.5rem;
+    --font-size-main: 2rem;
+    --font-size-button: 2rem;
     --font-size-nav-mobile: 2.4rem;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
@@ -23,13 +24,13 @@ saved: #9198e5, #a3caae
     --color-text-light: #f0f0f0;
     --color-subtitle-light: #999;
     --color-bg: #d9f2e5;
-    --block-bg-color: rgba(255,255,255,0.5);
+    --block-bg-color: #ffffff30;
     --color-link-hover: #e36330;
     --max-width-main: 700px;
     --text-transform-body: lowercase;
     --text-transform-h1: none;
     --text-transform-link: uppercase;
-    --text-transform-link-hover: lowercase;
+    --text-transform-link-hover: uppercase;
     --spacing-small: 0.5rem;
     --spacing-medium: 1rem;
     --spacing-large: 2rem;
@@ -51,7 +52,7 @@ body::after {
   content: "";
   position: fixed;
   background: rgba(255,255,255,0.05);
-  filter: url(#noiseFilter);
+  filter: url(#bgNoiseFilter);
 }
 
 .header {
@@ -105,7 +106,60 @@ body::after {
   align-items: center;
   text-align: center;
   margin: auto;
-  bottom: -50vh;
+  bottom: -60vh;
+  z-index: 1;
+}
+
+#eng-button, #art-button, #about-button {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-main);
+  border: none;
+  background-color: #ffffff00;
+  padding: 15px;
+  align-items: center;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+#eng-button:hover, #art-button:hover, #about-button:hover {
+  background-color: var(--block-bg-color);
+  border-radius: 20px;
+}
+
+.subpage dialog {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  border: None;
+  color: white;
+  background: #00093af2;
+  z-index: 0;
+}
+
+.subpage dialog::after {
+  content:"";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  filter: url(#subpageNoiseFilter);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+#close {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-button);
+  height: 100vh;
+  align-items: top;
+  background-color: #000000a0;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  color: var(--color-text-light);
+  border: none;
+}
+
+#eng {
   z-index: 1;
 }
 
@@ -118,8 +172,7 @@ body::after {
 
 .link:hover {
   color: var(--color-link-hover);
-  /*text-transform: var(--text-transform-link-hover);*/
-  text-decoration: underline;
+  /* text-transform: var(--text-transform-link-hover); */
 }
 
 /* The side navigation menu */
