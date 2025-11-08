@@ -28,12 +28,12 @@ a img {
 	 <svg style="position: absolute; width: 0; height: 0;">
 		<defs>
 			<filter id="bgNoiseFilter">
-			<feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" stitchTiles="stitch"/>
-			<feColorMatrix type="saturate" values="2"/>
+				<feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" stitchTiles="stitch"/>
+				<feColorMatrix type="saturate" values="2"/>
 			</filter>
 			<filter id="subpageNoiseFilter">
-			<feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="1" stitchTiles="stitch"/>
-			<feColorMatrix type="saturate" values="0"/>
+				<feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="1" stitchTiles="stitch"/>
+				<feColorMatrix type="saturate" values="0"/>
 			</filter>
 		</defs>
 	</svg>
@@ -41,7 +41,9 @@ a img {
 	<main>
 		<div class = "header">
 			<h1 id="name">
-				<a href="./index.html" class="link"> audrey zeng </a>
+				<button id="name-button" class = "link" onclick="document.getElementById('main-desc').show()">
+					audrey zeng
+				</button>
 			</h1>
 
 			<h2 id = "subtitle">
@@ -58,10 +60,17 @@ a img {
 			</div>
 		</div>
 
+		<div class="main-desc-container">
+			<dialog id="main-desc">
+				<p id = "intro-text"> Hi! My name is Audrey, and I'm currently a junior at Princeton majoring in Electrical Engineering with minors in Computer Science and Visual Arts. </p>
+				<p id = "hobbies-text"> I love to figure skate, do anything in the great outdoors, and read. If you have any interest in synchronized skating, backcountry camping, or contemporary fiction, reach out!!</p>
+			</dialog>
+		</div>
+
 		<div class="subpage">
 			<dialog id="eng">
 				<button id = "close" autofocus type="submit" onclick="document.getElementById('eng').close()"> back </button>
-				<a> this page is a work in progress! </a>
+				<span> this page is a work in progress! </span>
 			</dialog>
 		</div>
 
@@ -72,12 +81,13 @@ a img {
 			</dialog>
 		</div>
 
+		<!-- separate about me page
 		<div class="subpage">
 			<dialog id="about">
 				<button id = "close" autofocus type="submit" onclick="document.getElementById('about').close()"> back </button>
 				<a> this page is a work in progress! </a>
 			</dialog>
-		</div>
+		</div> -->
 
 		<!-- The sidebar
         <div class="sidebar">
@@ -97,5 +107,11 @@ a img {
 		-->
 
 	</main>
+
+	<footer>
+		<p> Coded in 3 days. From scratch, by me, without AI (mostly). because i wanted to. </p>
+	</footer>
+
 </body>
+
 </html>

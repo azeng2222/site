@@ -12,7 +12,7 @@ saved: #9198e5, #a3caae
     --font-size-heading: 5rem;
     --font-size-subtitle: 1.5rem;
     --font-size-subtitle-small: 1rem;
-    --font-size-main: 2rem;
+    --font-size-main: 1.5rem;
     --font-size-button: 2rem;
     --font-size-nav-mobile: 2.4rem;
     --font-weight-normal: 400;
@@ -23,6 +23,7 @@ saved: #9198e5, #a3caae
     --color-subtitle-dark: #444;
     --color-text-light: #f0f0f0;
     --color-subtitle-light: #999;
+    --color-footer: #8c38b0;
     --color-bg: #d9f2e5;
     --block-bg-color: #ffffff30;
     --color-link-hover: #e36330;
@@ -59,22 +60,64 @@ body::after {
   position: relative;
   /* font-family: "Garamond", Times, serif; */
   display: flex;
+  color: var(--color-text-dark);
   flex-direction: column;
   text-align: center;
   font-family: "Arial";
   z-index: 1;
 }
 
-#name {
+#name, #name-button {
   font-size: var(--font-size-heading);
   font-family: var(--font-family-main);
-  width: fit-content;
   text-transform: var(--text-transform-h1);
-  color: var(--color-text-dark);
   border-radius: 30px;
   margin: 0px auto;
   margin-top: 0.5em;
   margin-bottom: 0.01em;
+  background: none;
+  border: none;
+  font-weight: bold;
+}
+
+input:focus, button:focus a:focus {
+  outline: 0;
+}
+
+#main-desc {
+  height: 50vh;
+  width: 90vw;
+  border: none;
+  background: none;
+  z-index: 1;
+}
+
+#intro-text {
+  font-size: var(--font-size-main);
+  color: var(--color-subtitle-dark);
+  position: absolute;
+  top: 0;
+  left: 30px;
+  padding-bottom: 15px;
+  width: 25vw;
+  line-height: var(--spacing-large);
+}
+
+#hobbies-text {
+  font-size: var(--font-size-main);
+  color: var(--color-subtitle-dark);
+  position: absolute;
+  padding-top: 15px;
+  right: 20px;
+  text-align: right;
+  bottom: 0;
+  width: 25vw;
+  line-height: var(--spacing-large);
+}
+
+#main-desc span{
+  align-items: center;
+  font-size: var(--font-size-main);
 }
 
 #subtitle {
@@ -112,7 +155,7 @@ body::after {
 
 #eng-button, #art-button, #about-button {
   font-family: var(--font-family-main);
-  font-size: var(--font-size-main);
+  font-size: var(--font-size-button);
   border: none;
   background-color: #ffffff00;
   padding: 15px;
@@ -132,8 +175,14 @@ body::after {
   width: 100vw;
   border: None;
   color: white;
-  background: #00093af2;
+  background-color: #00093af2;
   z-index: 0;
+  transition: opacity 0.3s;
+}
+
+.subpage dialog[open] {
+  opacity: 1;
+  pointer-events: inherit;
 }
 
 .subpage dialog::after {
@@ -146,7 +195,7 @@ body::after {
   z-index: -1;
 }
 
-.subpage dialog a {
+.subpage dialog span {
   position: relative;
   font-size: var(--font-size-main);
   align-items: center;
@@ -156,6 +205,7 @@ body::after {
 #close {
   font-family: var(--font-family-main);
   font-size: var(--font-size-button);
+  width: fit-content;
   background-color: #000000a0;
   padding: 10px;
   margin: 10px;
@@ -178,6 +228,15 @@ body::after {
 .link:hover {
   color: var(--color-link-hover);
   /* text-transform: var(--text-transform-link-hover); */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  color: var(--color-footer);
+  z-index: 1;
 }
 
 /* The side navigation menu */
