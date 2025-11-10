@@ -9,7 +9,6 @@
 *::before,
 *::after {
   box-sizing: border-box;   /* ensures padding + border stay inside width/height */
-  margin: 0;
   padding: 0;
 }
 
@@ -18,9 +17,9 @@ saved: #9198e5, #a3caae
 */
 :root {
     --font-family-main: 'Times New Roman', monospace;
-    --font-size-heading: 5rem;
-    --font-size-subtitle: 1.5rem;
-    --font-size-subtitle-small: 1rem;
+    --font-size-heading: clamp(0.01rem, calc(3vw + 3vh), 5rem);
+    --font-size-subtitle: clamp(0.01rem, calc(2vw + 2vh), 1.5rem);
+    --font-size-subtitle-small: clamp(0.01rem, calc(1vw + 1vh), 1rem);
     --font-size-main: clamp(0.1rem, calc(1vw + 1vh), 2rem);
     --font-size-button: clamp(1rem, calc(2vw + 2vh), 2rem);
     --font-size-nav-mobile: 2.4rem;
@@ -63,26 +62,31 @@ body::after {
   position: fixed;
   background: rgba(255,255,255,0.05);
   filter: url(#bgNoiseFilter);
+  z-index: -1;
 }
 
 .main {
+  display: flex;
+  flex-direction: vertical;
   overflow: scroll;
 }
 
 .header {
-  position: absolute;
+  order: 0;
+  overflow: hidden;
   margin-inline: auto;
   left: 0;
   right: 0;
   top: 0;
+  height: 15vh;
   display: flex;
   color: var(--color-text-dark);
   flex-direction: column;
   text-align: center;
   font-family: "Arial";
-  z-index: 1;
-  /* background color for debugging
-  background: purple; */
+  background: #ffffff00;
+  z-index: 2;
+  /*background: purple; /* background color for debugging */
 }
 
 #name, #name-button {
@@ -125,19 +129,19 @@ input:focus, button:focus a:focus {
 }
 
 .main-desc-container {
-  position: absolute;
+  order: 1;
   margin-inline: auto;
   left: 0;
   right: 0;
-  top: 15vh;
   bottom: 15vh;
   height: 70vh;
   width: 75vw;
-  /* background: green; /*background color for debugging */
+  z-index: 0;
+  /*background: green; /*background color for debugging */
 }
 
 #main-desc {
-  position: absolute;
+  position: relative;
   inset: 0;
   border: none;
   width: calc(100% - 60px);
