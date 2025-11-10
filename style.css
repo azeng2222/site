@@ -236,28 +236,30 @@ input:focus, button:focus a:focus {
   font-family: var(--font-family-main);
   font-size: var(--font-size-button);
   border: none;
-  background-color: #ffffff00;
   padding: 15px;
   bottom: 0px;
-  /* align-items: center; */
+  background-color: #ffffff00;
   transition: background-color 0.3s;
   font-weight: bold;
   position: absolute;
-  bottom: 0;
 }
 
 #eng-button {
   left: 0;
+  /* background: green; /*background color for debugging */
 }
 
 #art-button {
   margin-inline: auto;
   right: 0;
   left: 0;
+  width: fit-content;
+  /* background: green; /*background color for debugging */
 }
 
 #about-button {
   right: 0;
+  /* background: green; /*background color for debugging */
 }
 
 #eng-button:hover, #art-button:hover, #about-button:hover {
