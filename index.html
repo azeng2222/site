@@ -52,14 +52,7 @@ a img {
 			</h2>
 		</div>
 
-		<div class="main-sections">
-			<div class="interests">
-				<button id = "eng-button" class="link" onclick="document.getElementById('eng').showModal()"> engineering </button>
-				<button id = "art-button" class="link" onclick="document.getElementById('art').showModal()"> art </button>
-				<button id = "about-button" class="link" onclick="document.getElementById('about').showModal()"> about me </button>
-			</div>
-		</div>
-
+		
 		<div class="main-desc-container">
 			<dialog id="main-desc">
 				<p id = "intro-text"> Hi! My name is Audrey, and I'm currently a junior at Princeton majoring in Electrical Engineering with minors in Computer Science and Visual Arts. </p>
@@ -72,10 +65,56 @@ a img {
 			</dialog>
 		</div>
 
+		<div class="main-sections">
+			<div class="interests">
+				<button id = "eng-button" class="link" onclick="document.getElementById('eng').showModal()"> engineering </button>
+				<button id = "art-button" class="link" onclick="document.getElementById('art').showModal()"> art </button>
+				<button id = "work-button" class="link" onclick="document.getElementById('work').showModal()"> work experience <br> (non-engineering) </button>
+			</div>
+		</div>
+
 		<div class="subpage">
 			<dialog id="eng">
 				<button id = "close" autofocus type="submit" onclick="document.getElementById('eng').close()"> back </button>
-				<span> this page is a work in progress! </span>
+				<h1 id = "subpage-header"> engineering experience </h1>
+				<hr>
+				<h2> Starlink </h2>
+					<h3 class = "date"> (May - Aug 2025) </h3>
+					<p> As an intern on the Sales Architecture Team, I developed a testing and reporting suite for Starlink network performance. I set up a physical test network in the HITL lab, using bash and Python to automate testing and reporting, and collaborated with external networking vendors to certify joint product offerings. My code samples were committed to the team codebase.
+						<a class = "link" href="https://www.linkedin.com/in/audreyzeng/"> Read my mentor's endorsement on my LinkedIn here. </a>
+					</p>
+					<hr>
+				<h2> Princeton University Laser Sensing (PULSe Lab) </h2>
+					<h3 class = "date"> (Feb 2024 - May 2025) </h3>
+					<p> 
+						<a href="298zeng.pdf"> <img id = "poster" src = "images/iw-poster.png"> </img> </a>
+						<img id = "lab" src = "images/lab.jpg"> </img>
+						<br>
+						As an undergraduate researcher at the PULSe lab under Dr. Gerard Wysocki, I designed optical systems with RF circuits to stabilize Quantum Cascade Laser Frequency Combs, designing a double PID loop to control the amplitude modulation of an externally-injected RF signal. 
+						<a class = "link" href="Zeng_Audrey.pdf"> Read my report here. </a>
+					</p>
+					<hr>
+				<h2> Robotic and Autonomous Systems Lab </h2>
+					<h3 class = "date"> (Sept - Dec 2025) </h3>
+					<p> 
+						<img id = "car" src = "images/car.jpg"> </img>
+						<br>
+						My partner and I built a fully autonomous car, designing and fabricating all our circuit boards from scratch, including a power distribution and motor driver board, a sensing board for speed control, and an analog video demodulation board. We wrote all of our own drivers in embedded C on a PSoC microcontroller.
+					</p>
+					<hr>
+				<h2> Electronic and Photonic Devices </h2>
+					<h3 class = "date"> (Sept - Dec 2024) </h3>
+					<p>
+						<img id = "wafer" src = "images/wafer.jpg"> </img>
+						<br>
+						 I fabricated a chip on a silicon wafer with n-channel MOSFETs, photodiodes, resistor arrays, solar cells, and NAND/NOR gates.
+					</p>
+					<hr>
+				<h2> Shi Lab </h2>
+					<h3 class = "date"> (2020-2023) </h3>
+					<p>
+						I was a research intern at the Shi lab in UC San Diego's Bioengineering Department, where I used Raman spectroscopy to study lipid and protein metabolism in human muscle tissue and <i> Drosophila </i> ovaries. <a class="link" href="https://www.frontiersin.org/journals/aging/articles/10.3389/fragi.2021.819903/full"> Here is one publication from my time there. </a>
+					</p>
 			</dialog>
 		</div>
 
@@ -86,13 +125,12 @@ a img {
 			</dialog>
 		</div>
 
-		<!-- separate about me page
 		<div class="subpage">
-			<dialog id="about">
-				<button id = "close" autofocus type="submit" onclick="document.getElementById('about').close()"> back </button>
+			<dialog id="work">
+				<button id = "close" autofocus type="submit" onclick="document.getElementById('work').close()"> back </button>
 				<a> this page is a work in progress! </a>
 			</dialog>
-		</div> -->
+		</div>
 
 		<!-- The sidebar
         <div class="sidebar">
