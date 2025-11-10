@@ -328,7 +328,7 @@ input:focus, button:focus a:focus {
 
 #disclaimer {
   position: absolute;
-  bottom: 0;
+  bottom: 1vh;
   width: 100vw;
   text-align: center;
   color: var(--color-footer);
