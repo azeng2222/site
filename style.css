@@ -225,7 +225,7 @@ input:focus, button:focus a:focus {
 
 .main-sections {
   font-size: var(--font-size-main);
-  width: 50vw;
+  width: 75vw;
   height: 10vh;
   position: absolute;
   left: 0;
