@@ -21,8 +21,8 @@ saved: #9198e5, #a3caae
     --font-size-heading: 5rem;
     --font-size-subtitle: 1.5rem;
     --font-size-subtitle-small: 1rem;
-    --font-size-main: clamp(1rem, calc(1vw + 1vh), 2rem);
-    --font-size-button: 2rem;
+    --font-size-main: clamp(0.1rem, calc(1vw + 1vh), 2rem);
+    --font-size-button: clamp(1rem, calc(2vw + 2vh), 2rem);
     --font-size-nav-mobile: 2.4rem;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
@@ -129,8 +129,8 @@ input:focus, button:focus a:focus {
   margin-inline: auto;
   left: 0;
   right: 0;
-  top: 17vh;
-  bottom: 25vh;
+  top: 15vh;
+  bottom: 15vh;
   height: 70vh;
   width: 75vw;
   /* background: green; /*background color for debugging */
@@ -168,7 +168,7 @@ input:focus, button:focus a:focus {
   right: 30px;
   bottom: 30px;
   text-align: right;
-  max-height: 45%;
+  max-height: calc(45%);
   max-width: calc(30%);
   line-height: var(--spacing-large);
 }
@@ -228,7 +228,7 @@ input:focus, button:focus a:focus {
   right: 0;
   text-align: center;
   margin-inline: auto;
-  bottom: 50px;
+  bottom: 10vh;
   z-index: 1;
 }
 
