@@ -307,7 +307,7 @@ input:focus, button:focus a:focus {
   font-size: calc(0.75 * var(--font-size-heading));
   text-align: center;
   z-index: 1;
-  background: #000000a0; 
+  color: #000000a0; 
   width: fit-content;
   padding: 2%;
   margin: auto;
