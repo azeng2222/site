@@ -254,17 +254,15 @@ input:focus, button:focus a:focus {
 }
 
 #art-button {
-  margin-inline: auto;
   right: 0;
-  left: 0;
-  width: fit-content;
   /* background: green; /*background color for debugging */
 }
 
+/* separate about me page
 #about-button {
   right: 0;
-  /* background: green; /*background color for debugging */
-}
+  background: green; background color for debugging
+} */
 
 #eng-button:hover, #art-button:hover, #about-button:hover {
   background-color: var(--block-bg-color);
