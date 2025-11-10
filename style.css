@@ -21,7 +21,7 @@ saved: #9198e5, #a3caae
     --font-size-subtitle: clamp(0.01rem, calc(2vw + 2vh), 1.5rem);
     --font-size-subtitle-small: clamp(0.01rem, calc(1vw + 1vh), 1rem);
     --font-size-main: clamp(0.1rem, calc(1vw + 1vh), 2rem);
-    --font-size-button: clamp(1rem, calc(2vw + 2vh), 2rem);
+    --font-size-button: clamp(0.01rem, calc(1,5vw + 1.5vh), 2rem);
     --font-size-nav-mobile: 2.4rem;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
