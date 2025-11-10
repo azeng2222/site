@@ -129,15 +129,16 @@ input:focus, button:focus a:focus {
 }
 
 .main-desc-container {
+  display: flex;
   order: 1;
   margin-inline: auto;
   left: 0;
   right: 0;
-  bottom: 15vh;
-  height: 70vh;
+  bottom: 20vh;
+  height: 65vh;
   width: 75vw;
   z-index: 0;
-  /*background: green; /*background color for debugging */
+  /* background: green; /*background color for debugging */
 }
 
 #main-desc {
@@ -279,7 +280,7 @@ input:focus, button:focus a:focus {
   width: 100vw;
   border: None;
   color: var(--color-text-light);
-  background-color: #2f3764f1;
+  background-color: #2f3764fd;
   z-index: 0;
   transition: opacity 0.3s;
   overflow: scroll;
@@ -303,7 +304,7 @@ input:focus, button:focus a:focus {
 } */
 
 #subpage-header {
-  font-size: calc(2 * var(--font-size-main));
+  font-size: calc(0.75 * var(--font-size-heading));
   text-align: center;
   z-index: 1;
   background: #000000a0; 
@@ -315,7 +316,7 @@ input:focus, button:focus a:focus {
 .subpage dialog h2 {
   color: white;
   position: relative;
-  font-size: calc(1.5 * var(--font-size-main));
+  font-size: calc(0.5rem + var(--font-size-main));
   text-align: center;
   z-index: 1;
   margin-top: 2%;
@@ -325,7 +326,7 @@ input:focus, button:focus a:focus {
 .subpage dialog h3 {
   margin-top: 0;
   text-align: center;
-  font-size: calc(0.8 * var(--font-size-main));
+  font-size: calc(var(--font-size-main) - 0.5rem);
   color: var(--color-subtitle-light);
 }
 
@@ -334,7 +335,7 @@ input:focus, button:focus a:focus {
   padding: 5%;
   padding-top: 0;
   padding-bottom: 0;
-  font-size: calc(0.8 * var(--font-size-main));
+  font-size: calc(var(--font-size-main) - 0.25rem);
   color: var(--color-subtitle-lighter);
 }
 
