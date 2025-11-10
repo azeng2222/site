@@ -12,7 +12,7 @@ saved: #9198e5, #a3caae
     --font-size-heading: 5rem;
     --font-size-subtitle: 1.5rem;
     --font-size-subtitle-small: 1rem;
-    --font-size-main: 1.5rem;
+    --font-size-main: 40vw;
     --font-size-button: 2rem;
     --font-size-nav-mobile: 2.4rem;
     --font-weight-normal: 400;
@@ -33,7 +33,7 @@ saved: #9198e5, #a3caae
     --text-transform-link: uppercase;
     --text-transform-link-hover: uppercase;
     --spacing-small: 0.5rem;
-    --spacing-medium: 1rem;
+    --spacing-medium: 1.5rem;
     --spacing-large: 2rem;
     --spacing-extra-large: 3rem;
     --max-width-content: 60dvw;
@@ -56,9 +56,16 @@ body::after {
   filter: url(#bgNoiseFilter);
 }
 
+.main {
+  overflow: scroll;
+}
+
 .header {
-  position: relative;
-  /* font-family: "Garamond", Times, serif; */
+  position: absolute;
+  margin-inline: auto;
+  left: 0;
+  right: 0;
+  top: 0;
   display: flex;
   color: var(--color-text-dark);
   flex-direction: column;
@@ -115,23 +122,22 @@ input:focus, button:focus a:focus {
   border: none;
   background: none;
   z-index: 1;
-  overflow: hidden;
 }
 
 #intro-text {
-  font-size: 1.25em;
+  font-size: (--font-size-main);
   color: var(--color-subtitle-dark);
   position: absolute;
   top: 0;
   left: 30px;
-  padding-bottom: 15px;
+  bottom: calc(40%);
   height: calc(50%);
   max-width: calc(30%);
   line-height: var(--spacing-large);
 }
 
 #hobbies-text {
-  font-size: 1.25em;
+  font-size: (--font-size-main);
   color: var(--color-subtitle-dark);
   position: absolute;
   padding-top: 15px;
@@ -145,20 +151,20 @@ input:focus, button:focus a:focus {
 
 #kaaterskills {
   position: absolute;
-  height: calc(50%);
+  height: 30vh;
   bottom: 0;
   right: calc(70%);
 }
 
 #potato-chip {
   position: absolute;
-  height: calc(45%);
+  height: 25vh;
   right: 0%;
 }
 
 #skating {
   position: absolute;
-  height: calc(27%);
+  height: 27vw;
   top: 5%;
   margin-inline: auto;
   left: 0;
@@ -190,25 +196,43 @@ input:focus, button:focus a:focus {
 
 .main-sections {
   font-size: var(--font-size-main);
-  width: fit-content;
+  width: 50vw;
+  height: 10vh;
   position: absolute;
   left: 0;
   right: 0;
   text-align: center;
   margin-inline: auto;
-  bottom: 100px;
+  bottom: 50px;
   z-index: 1;
 }
 
-#eng-button, #art-button, #about-button {
+.interests * {
   font-family: var(--font-family-main);
   font-size: var(--font-size-button);
   border: none;
   background-color: #ffffff00;
   padding: 15px;
-  align-items: center;
+  bottom: 0px;
+  /* align-items: center; */
   transition: background-color 0.3s;
   font-weight: bold;
+  position: absolute;
+  bottom: 0;
+}
+
+#eng-button {
+  left: 0;
+}
+
+#art-button {
+  margin-inline: auto;
+  right: 0;
+  left: 0;
+}
+
+#about-button {
+  right: 0;
 }
 
 #eng-button:hover, #art-button:hover, #about-button:hover {
@@ -297,6 +321,18 @@ input:focus, button:focus a:focus {
 @media screen and (max-width: 1000px) {
   #kaaterskills {display: none;}
   #potato-chip {display: none;}
+}
+
+/* on screens that are less than 1000px, hide all images */
+@media screen and (max-height: 1000px) {
+  #intro-text {
+    font-size: 1rem;
+    line-height: var(--spacing-medium);
+  }
+  #hobbies-text {
+    font-size: 1rem;
+    line-height: var(--spacing-medium);
+  }
 }
 
 /* The side navigation menu */
