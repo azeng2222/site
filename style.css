@@ -80,10 +80,10 @@ body::after {
   top: 0;
   height: 15vh;
   display: flex;
-  color: var(--color-text-dark);
   flex-direction: column;
   text-align: center;
   font-family: "Arial";
+  color: var(--color-text-dark);
   background: #ffffff00;
   z-index: 2;
   /*background: purple; /* background color for debugging */
