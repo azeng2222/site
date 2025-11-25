@@ -459,10 +459,10 @@ footer {
 }
 
 /* on screens that are less than 700px, hide all images */
-/* @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   #kaaterskills {display: none;}
   #potato-chip {display: none;}
-} */
+}
 
 /* on screens that are less than 1000px, hide all images */
 @media screen and (max-height: 1000px) {
