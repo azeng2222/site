@@ -54,22 +54,28 @@ a img {
 
 		
 		<div class="main-desc-container">
-			<dialog id="main-desc">
-				<p id = "intro-text"> Hi! My name is Audrey, and I'm currently a junior at Princeton majoring in Electrical Engineering with minors in Computer Science and Visual Arts. </p>
-				<img id="potato-chip" src="images/potato-chip.jpg" alt="three girls hugging and standing on a thin slab of rock jutting out from a mountain"> </img>
-				<img id="kaaterskills" src="images/kaaterskills.jpg" alt="two girls hugging, standing in front of a frozen waterfall"> </img>
-				<img id="skating" src="images/skating.jpg" alt="a girl in a blue figure skating dress in a spotlight, holding her leg up in a split behind her"> </img>
-				<img id="poster-session" src="images/poster-session.jpg" alt="three girls standing next to a research poster"> </img>
-				<img id="family" src="images/family.jpg" alt="four people posing in dark blue lighting"> </img>
-				<p id = "hobbies-text"> I love to figure skate, do anything in the great outdoors, and read. If you have any interest in synchronized skating, backcountry camping, or contemporary fiction, reach out!!</p>
-			</dialog>
-		</div>
-
-		<div class="main-sections">
-			<div class="interests">
+			<div class="main-sections">
 				<button id = "eng-button" class="link" onclick="document.getElementById('eng').showModal()"> engineering </button>
 				<button id = "art-button" class="link" onclick="document.getElementById('art').showModal()"> art </button>
 				<button id = "work-button" class="link" onclick="document.getElementById('work').showModal()"> work experience <br> (non-engineering) </button>
+			</div>
+
+			<dialog id="main-desc">
+				<p id = "intro-text"> Hi! My name is Audrey, and I'm currently a junior at Princeton majoring in Electrical Engineering with minors in Computer Science and Visual Arts. </p>
+				<div id = "pictures" >
+					<img id="potato-chip" src="images/potato-chip.jpg" alt="three girls hugging and standing on a thin slab of rock jutting out from a mountain"> </img>
+					<img id="kaaterskills" src="images/kaaterskills.jpg" alt="two girls hugging, standing in front of a frozen waterfall"> </img>
+					<img id="skating" src="images/skating.jpg" alt="a girl in a blue figure skating dress in a spotlight, holding her leg up in a split behind her"> </img>
+					<!-- <img id="poster-session" src="images/poster-session.jpg" alt="three girls standing next to a research poster"> </img> -->
+					<!-- <img id="family" src="images/family.jpg" alt="four people posing in dark blue lighting"> </img> -->
+				</div>
+				<p id = "hobbies-text"> I love to figure skate, do anything in the great outdoors, and read. If you have any interest in synchronized skating, backcountry camping, or contemporary fiction, reach out!!</p>
+			</dialog>
+
+			<div id="socials"> 
+				<a class="link" href="https://www.goodreads.com/theawesomeaudy"> goodreads </a>
+				<a class="link" href="https://www.linkedin.com/in/audreyzeng"> linkedin </a>
+				<a class="link" href="mailto: contact@azng.dev"> email </a>
 			</div>
 		</div>
 
@@ -276,12 +282,7 @@ a img {
 </body>
 
 <footer>
-		<div id="socials"> 
-			<a class="link" href="https://www.goodreads.com/theawesomeaudy"> goodreads </a>
-			<a class="link" href="https://www.linkedin.com/in/audreyzeng"> linkedin </a>
-			<a class="link" href="mailto: contact@azng.dev"> email </a>
-		</div>
-		<p id = "disclaimer"> Coded in 3 days. From scratch, by me, without AI (mostly). </p>
-	</footer>
+	<p id = "disclaimer"> Coded in 3 days. From scratch, by me, without AI (mostly). </p>
+</footer>
 
 </html>
