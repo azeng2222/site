@@ -180,7 +180,6 @@ input:focus, button:focus a:focus {
   max-height: 50%;
   margin-left: 15px;
   margin-right: 15px;
-  flex-wrap: wrap;
   /* background: orange; /* background color for debugging */
 }
 
