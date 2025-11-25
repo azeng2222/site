@@ -125,12 +125,12 @@ input:focus, button:focus a:focus {
 .main-desc-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   order: 1;
   margin-inline: auto;
   left: 0;
   right: 0;
-  bottom: 20vh;
+  margin-top: 5vh;
   height: 65vh;
   width: 80vw;
   z-index: 0;
@@ -153,6 +153,10 @@ input:focus, button:focus a:focus {
   backdrop-filter: blur (10px) url(#bgNoiseFilter);
   z-index: 1;
  /*  background: purple; /* background color for debugging */
+}
+
+#main-desc:not([open]) {
+  display: none;
 }
 
 #intro-text {
@@ -246,7 +250,7 @@ input:focus, button:focus a:focus {
 .main-sections {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 5%;
   font-size: var(--font-size-main);
   width: fit-content;
@@ -288,15 +292,6 @@ input:focus, button:focus a:focus {
 #eng-button:hover, #art-button:hover, #work-button:hover {
   background-color: var(--block-bg-color);
   border-radius: 20px;
-}
-
-#socials {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 5%;
-  /* background: yellow; /* background color for debugging */
-  position: relative;
 }
 
 .subpage dialog {
@@ -439,6 +434,15 @@ footer {
   justify-content: flex-end;
   /* background: orange; /* background color for debugging */
   margin-top: auto;
+}
+
+#socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  /* background: yellow; /* background color for debugging */
+  position: relative;
 }
 
 #disclaimer {
