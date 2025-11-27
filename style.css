@@ -392,6 +392,7 @@ input:focus, button:focus a:focus {
   border-radius: 10px;
   color: black;
   border: none;
+  position: fixed;
 }
 
 #eng {
