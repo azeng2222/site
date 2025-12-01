@@ -338,7 +338,7 @@ input:focus, button:focus a:focus {
   font-size: calc(0.5rem + var(--font-size-main));
   text-align: center;
   z-index: 1;
-  margin-top: 2%;
+  margin-top: 5vh;
   margin-bottom: 0;
 }
 
@@ -358,10 +358,6 @@ input:focus, button:focus a:focus {
   color: black;
 }
 
-.subpage dialog img {
-  width: 25%;
-}
-
 .subpage figure {
   color: black;
   text-align: center;
@@ -378,7 +374,7 @@ input:focus, button:focus a:focus {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin-bottom: 50vh;
+  margin-bottom: 5vh;
 }
 
 #close {
