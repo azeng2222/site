@@ -96,7 +96,7 @@ body::after {
   border: none;
   font-weight: bold;
   /* background color for debugging
-  background: blue; */
+  background: white; */
 }
 
 input:focus, button:focus a:focus {
@@ -305,8 +305,9 @@ input:focus, button:focus a:focus {
   overflow: scroll;
 }
 
-/*  === UNUSED FILTER ===
+/*  === UNUSED FILTER === */
 
+/*
 .subpage dialog[open] {
   opacity: 1;
   pointer-events: inherit;
@@ -326,10 +327,18 @@ input:focus, button:focus a:focus {
   font-size: calc(0.75 * var(--font-size-heading));
   text-align: center;
   z-index: 1;
-  color: #000000a0; 
+  color: #000000a0;
+  text-transform: uppercase;
   width: fit-content;
   padding: 2%;
   margin: auto;
+}
+
+#subpage-subheader {
+  font-size: calc(0.75 * var(--font-size-main));
+  font-weight: normal;
+  text-align: center;
+  color: var(--color-subtitle-dark)
 }
 
 .subpage dialog h2 {
@@ -362,6 +371,10 @@ input:focus, button:focus a:focus {
   color: black;
   text-align: center;
   margin: 1%;
+}
+
+#eng img {
+  width: 50%;
 }
 
 #art figure img {
