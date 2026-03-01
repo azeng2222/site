@@ -374,7 +374,8 @@ input:focus, button:focus a:focus {
 }
 
 #eng img {
-  width: 50%;
+  max-width: 50vw;
+  max-height: 25vh;
 }
 
 #art figure img {
