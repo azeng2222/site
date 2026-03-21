@@ -58,6 +58,10 @@ body {
   flex-direction: column;
 }
 
+.site-subpage {
+  background: radial-gradient(#dcdfff, #e5ffec);
+}
+
 body::after {
   inset: 0;
   pointer-events: none;
@@ -77,7 +81,6 @@ body::after {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-family: "Arial";
   color: var(--color-text-dark);
   background: #ffffff00;
   z-index: 2;
@@ -408,6 +411,38 @@ input:focus, button:focus a:focus {
 #eng {
   z-index: 1;
 }
+
+/* RTL-SDR page style shtuff */
+
+.site-subpage img {
+  max-height: 30vh;
+  max-width: 40vw;
+}
+
+.back-to-home {
+  padding: 20px;
+  padding-left: 3vw;
+  margin-right: 80vw;
+  font-size: var(--font-size-button);
+  color: var(--color-text);
+  background: #00000030;
+}
+
+.day-logs {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.day-logs h2 {
+  text-align: center;
+}
+
+.day-logs p {
+  font-size: calc(0.75*var(--font-size-main));
+  line-height: var(--spacing-medium);
+}
+
+
 
 /* Hyperlinks */
 .link{
