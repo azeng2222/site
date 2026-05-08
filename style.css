@@ -490,8 +490,9 @@ footer {
   flex-direction: row;
   justify-content: center;
   gap: 5%;
-  /* background: yellow; /* background color for debugging */
   position: relative;
+  padding: 2vh;
+  /* background: yellow; /* background color for debugging */
 }
 
 #disclaimer {
