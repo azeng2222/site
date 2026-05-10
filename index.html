@@ -28,8 +28,9 @@ a img {
 	<svg style="position: absolute; width: 0; height: 0;">
 		<defs>
 			<filter id="bgNoiseFilter">
-				<feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" stitchTiles="stitch"/>
-				<feColorMatrix type="saturate" values="2"/>
+				<feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" seed="2" reuslt="noise"/>
+				<!-- <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" stitchTiles="stitch"/> -->
+				<!-- <feColorMatrix type="saturate" values="2"/> -->
 			</filter>
 			<filter id="subpageNoiseFilter">
 				<feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="1" stitchTiles="stitch"/>
@@ -61,16 +62,29 @@ a img {
 			</div>
 
 			<dialog id="main-desc">
-				<p id = "intro-text"> Hi! My name is Audrey, and I'm currently a junior at Princeton majoring in Electrical Engineering with minors in Computer Science and Visual Arts. </p>
+				<p> 
+					Hi, I'm Audrey! I'm a junior at Princeton majoring in Electrical Engineering with a minor in Visual Arts.
+					<!-- <br> <br>
+					I love learning about the world through observation and experimentation, then use this learning to create.
+					Engineering and art are just different names for making cool things :&#41; -->
+					<br> <br>
+					I'm particularly interested in light and communications, on both a scientific and visual level.
+					I've conducted research on the usage of Raman spectroscopy's for biological imaging, and on mid-IR laser combs for gas spectroscopy.
+					I've worked with satellite internet models of connectivity at Starlink, and will be further exploring communications at MIT Lincoln Laboratory this summer with the Communications Networks and Analysis group.
+					At Princeton, I'm working with both light and communications through my research with the Lightwave Communications Laboratory under Professor Paul Prucnal.
+					In my artwork, I'm exploring both 2D and 3D representations of light with pieces necessitating nontraditional viewer interactions.
+					<br> <br>
+					When I'm not doing curricular things, find me figure skating, reading, hiking, or in a rabbit-hole on physics/math YouTube. 
+					<br> <br>
+					If you also love talking engineering, physics, art, skating, books, or really anything else nerdy, reach out to me! 
+					I love meeting new people and making new friends :&#41;
+				</p>
 				<div id = "pictures" >
 					<img id="potato-chip" src="images/potato-chip.jpg" alt="three girls hugging and standing on a thin slab of rock jutting out from a mountain"> </img>
 					<img id="kaaterskills" src="images/kaaterskills.jpg" alt="two girls hugging, standing in front of a frozen waterfall"> </img>
 					<img id="skating" src="images/skating.jpg" alt="a girl in a blue figure skating dress in a spotlight, holding her leg up in a split behind her"> </img>
-					<!-- <img id="poster-session" src="images/poster-session.jpg" alt="three girls standing next to a research poster"> </img> -->
-					<!-- <img id="family" src="images/family.jpg" alt="four people posing in dark blue lighting"> </img> -->
 				</div>
-				<p id = "hobbies-text"> Alongside engineering and art, I love to figure skate, be outdoors, and read. If you have any interest in synchronized skating, backcountry camping, or contemporary fiction, reach out!!</p>
-			</dialog>
+				</dialog>
 
 		</div>
 
@@ -149,7 +163,7 @@ a img {
 				<button id = "close" autofocus type="submit" onclick="document.getElementById('art').close()"> back </button>
 				<!-- <h1 id = "subpage-header"> art </h1> -->
 
-				<h1 id = "subpage-subheader"> more to come... </h1>
+				<h1 id = "subpage-subheader"> select pieces. more to come... </h1>
 
 				<h2> 2025 </h2>
 				<div class = "yearly-art">
@@ -169,30 +183,30 @@ a img {
 						<img src="art/mom-cat-painting.jpg"> </img> 
 						<figcaption> acrylic on canvas, 12"x14" (maybe?) </figcaption>
 					</figure>
-					
-					<figure id="prints" class="watermark"> 
-						<img src="art/watermelon-prints.jpg"> </img> 
-						<figcaption> linocuts, various sized homemade and vellum paper </figcaption>
-					</figure>
-
-					<figure id="comic" class="watermark"> 
-						<img src="art/comic-panels.jpg"> </img> 
-						<figcaption> comic strip, india ink on paper </figcaption>
-					</figure>
 
 					<figure id="still-life" class="watermark"> 
 						<img src="art/still-life.jpg"> </img> 
 						<figcaption> charcoal on paper, 12"x16" (maybe?) </figcaption>
 					</figure>
-
-					<figure id="observations" class="watermark"> 
-						<img src="art/observations.jpg"> </img> 
-						<figcaption> marker on paper, 3"x3" each </figcaption>
-					</figure>
 				</div>
 
 				<h2> 2023 </h2>
 				<div class = "yearly-art">
+					<figure id="shadow" class="watermark">
+						<img src="art/shadow-box.jpg"> </img>
+						<figcaption> (1/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
+					</figure>
+
+					<figure id="shadow" class="watermark">
+						<img src="art/shadow-1.jpg" > </img>
+						<figcaption> (2/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
+					</figure>
+
+					<figure id="shadow" class="watermark">
+						<img src="art/shadow-2.jpg"> </img>
+						<figcaption> (3/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
+					</figure>
+					
 					<figure id="tambi" class="watermark"> 
 						<img src="art/tambi.jpg"> </img> 
 						<figcaption> Adobe Photoshop illustration, 1920 x 3160 px </figcaption>
@@ -211,21 +225,6 @@ a img {
 					<figure id="reaching" class="watermark"> 
 						<img src="art/reaching.jpg"> </img> 
 						<figcaption> acrylic on canvas, 12"x15.5" </figcaption>
-					</figure>
-
-					<figure id="shadow" class="watermark">
-						<img src="art/shadow-box.jpg"> </img>
-						<figcaption> (1/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
-					</figure>
-
-					<figure id="shadow" class="watermark">
-						<img src="art/shadow-1.jpg" > </img>
-						<figcaption> (2/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
-					</figure>
-
-					<figure id="shadow" class="watermark">
-						<img src="art/shadow-2.jpg"> </img>
-						<figcaption> (3/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
 					</figure>
 				</div>
 				

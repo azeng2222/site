@@ -71,6 +71,18 @@ body::after {
   z-index: -1;
 }
 
+p {
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: calc(var(--font-size-main) - 0.25rem);
+  color: black;
+}
+
+.subpage p{
+  text-align: center;
+}
+
 .header {
   order: 0;
   margin-inline: auto;
@@ -148,11 +160,9 @@ input:focus, button:focus a:focus {
   border: none;
   width: 75%;
   height: 90%;
-  /* width: calc(100% - 60px);
-  height: calc(100% - 60px); */
   margin: 30px;
-  border-radius: 50px;
-  background: #ffffff50;
+  /* border-radius: 50px; */
+  background: #ffffff00;
   backdrop-filter: blur (10px) url(#bgNoiseFilter);
   z-index: 1;
  /*  background: purple; /* background color for debugging */
@@ -160,19 +170,6 @@ input:focus, button:focus a:focus {
 
 #main-desc:not([open]) {
   display: none;
-}
-
-#intro-text {
-  font-size: var(--font-size-main);
-  color: var(--color-subtitle-dark);
-  margin-right: 15px;
-  margin-left: 15px;
-  text-align: center;
-  /* position: absolute;
-  bottom: calc(40%);
-  max-height: calc(45%);
-  max-width: calc(30%); */
-  line-height: var(--spacing-large);
 }
 
 #pictures {
@@ -361,15 +358,6 @@ input:focus, button:focus a:focus {
   color: black;
 }
 
-.subpage dialog p {
-  text-align: center;
-  padding: 5%;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-size: calc(var(--font-size-main) - 0.25rem);
-  color: black;
-}
-
 .subpage figure {
   color: black;
   text-align: center;
@@ -388,7 +376,9 @@ input:focus, button:focus a:focus {
 
 .yearly-art {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 30px;
   margin-bottom: 5vh;
