@@ -72,16 +72,15 @@ body::after {
 }
 
 p {
-  padding: 5%;
   padding-top: 0;
   padding-bottom: 0;
   font-size: calc(var(--font-size-main) - 0.25rem);
   color: black;
 }
 
-.subpage p{
+/* .subpage p{
   text-align: center;
-}
+} */
 
 .header {
   order: 0;
@@ -293,18 +292,6 @@ input:focus, button:focus a:focus {
   border-radius: 20px;
 }
 
-.subpage dialog {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  border: None;
-  color: var(--color-text-light);
-  background-color: white;
-  z-index: 0;
-  transition: opacity 0.3s;
-  overflow: scroll;
-}
-
 /*  === UNUSED FILTER === */
 
 /*
@@ -322,6 +309,18 @@ input:focus, button:focus a:focus {
   opacity: 0.7;
   z-index: -1;
 } */
+
+.subpage dialog {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  border: None;
+  color: var(--color-text-light);
+  background-color: white;
+  z-index: 0;
+  transition: opacity 0.3s;
+  overflow: scroll;
+}
 
 #subpage-header {
   font-size: calc(0.75 * var(--font-size-heading));
@@ -341,19 +340,26 @@ input:focus, button:focus a:focus {
   color: var(--color-subtitle-dark)
 }
 
+.subpage-section {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .subpage dialog h2 {
   color: black;
   position: relative;
   font-size: calc(0.5rem + var(--font-size-main));
-  text-align: center;
   z-index: 1;
-  margin-top: 5vh;
+  margin-top: 2%;
   margin-bottom: 0;
 }
 
-.subpage dialog h3 {
-  margin-top: 0;
+#art h2 {
   text-align: center;
+}
+
+.date {
+  margin-top: 0;
   font-size: calc(var(--font-size-main) - 0.5rem);
   color: black;
 }

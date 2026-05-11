@@ -58,24 +58,24 @@ a img {
 			<div class="main-sections">
 				<button id = "eng-button" class="link" onclick="document.getElementById('eng').showModal()"> engineering </button>
 				<button id = "art-button" class="link" onclick="document.getElementById('art').showModal()"> art </button>
-				<button id = "work-button" class="link" onclick="document.getElementById('work').showModal()"> work experience <br> (non-engineering) </button>
+				<button id = "work-button" class="link" onclick="document.getElementById('work').showModal()"> my hobbies, formalized <br> (non-engineering work experience, once could say) </button>
 			</div>
 
 			<dialog id="main-desc">
 				<p> 
 					Hi, I'm Audrey! I'm a junior at Princeton majoring in Electrical Engineering with a minor in Visual Arts.
-					<!-- <br> <br>
-					I love learning about the world through observation and experimentation, then use this learning to create.
-					Engineering and art are just different names for making cool things :&#41; -->
 					<br> <br>
 					I'm particularly interested in light and communications, on both a scientific and visual level.
 					I'm currently working with both in Princeton's <a class = "link" href="https://prucnal.princeton.edu/">Lightwave Communications Resaerch Lab</a> under Paul Prucnal!
 					In my artwork, I'm figuring out how to visually represent light with pieces necessitating nontraditional viewer interactions.
 					<br> <br>
-					When I'm not working on a project, find me <a class = "link" href="https://figureskatingclub.campusrec.princeton.edu/">figure skating</a>, hiking, or reading. 
+					Sidequests are just as important to me as my work! 
+					We do not create in a bubble; hence, when I'm not working on a project, you can find me meeting new people or putting myself in uncomfortably new situations to learn more about the anthropocene.
+					My favorite avenues to do so are <a class = "link" href="https://figureskatingclub.campusrec.princeton.edu/">figure skating</a>, hiking, reading, running, and travelling. 
 					<br> <br>
+					I firmly believe that the best engineering is people-centric.
 					If you also love talking engineering, physics, art, books, or really anything else nerdy, reach out to me! 
-					I love meeting new people and making new friends :&#41;
+					I love new friends :&#41;
 				</p>
 				<div id = "pictures" >
 					<img id="potato-chip" src="images/potato-chip.jpg" alt="three girls hugging and standing on a thin slab of rock jutting out from a mountain"> </img>
@@ -89,27 +89,32 @@ a img {
 		<div class="subpage">
 			<dialog id="eng">
 				<button id = "close" autofocus type="submit" onclick="document.getElementById('eng').close()"> back </button>
-				<h1 id = "subpage-header"> engineering experience </h1>
+				<!-- <h1 id = "subpage-header"> engineering experience </h1> -->
 				<h1 id = "subpage-subheader">
 					<b>Programming Languages:</b> Python, MATLAB, Java, C++, Bash, HTML, CSS, Embedded C <br>	
 					<b>Tools and Systems: </b> Unix, iPerf, tcpdump, Wireshark, KiCad, Arduino, Git, Circuit Design, Adobe Photoshop, Adobe Illustrator
 				</h1>
 				<hr>
-				<h2> Software Defined Radio </h2>
+				<!-- <div class = "subpage-section">
+					<h2> Software Defined Radio </h2>
 					<p> 
 						I got an RTL-SDR dongle while studying abroad because I was bored. <a class = "link" href="rtl-sdr" > Read about my journey learning about RF, antennas, and signals here! </a>
 					</p>
-				<hr>
-				<h2> Starlink </h2>
+				</div>
+				<hr> -->
+				<div class = "subpage-section">
+					<h2> Starlink </h2>
 					<h3 class = "date"> (May - Aug 2025) </h3>
-					<p> As an engineering intern on the Sales Architecture Team, I developed Starlink Global Enterprise Sales&apos;s first testing and reporting suite for network performance, 
+					<p> 
+						As an engineering intern on the Sales Architecture Team, I developed Starlink Global Enterprise Sales&apos;s first testing and reporting suite for network performance, 
 						implementing a test lab and network using UNIX system tools (iperf, tcpdump, ping), Python, routing and switching protocols. 
 						With this test suite, I inaugurated collaboration with external networking vendors to certify joint product offerings.
 						<a class = "link" href="https://www.linkedin.com/in/audreyzeng/"> Read my mentor's endorsement here. </a>
-
 					</p>
-					<hr>
-				<h2> Princeton University Laser Sensing (PULSe Lab) </h2>
+				</div>
+				<hr>
+				<div class = "subpage-section">
+					<h2> Princeton University Laser Sensing (PULSe Lab) </h2>
 					<h3 class = "date"> (Feb 2024 - May 2025) </h3>
 					<p> 
 						<a href="298zeng.pdf"> <img id = "298-poster" src = "images/iw-poster.png"> </img> </a>
@@ -119,8 +124,10 @@ a img {
 						As an undergraduate researcher at the PULSe lab under Dr. Gerard Wysocki, I designed optical systems with RF circuits to stabilize Quantum Cascade Laser Frequency Combs, designing a double PID loop to control the amplitude modulation of an externally-injected RF signal. For more details,
 						<a class = "link" href="Zeng_Audrey.pdf"> read my full report here, </a> or read <a class = "link" href="https://doi.org/10.1364/CLEO_AT.2025.AA122_3"> our publication in the CLEO 2025 proceedings here. </a>
 					</p>
-					<hr>
-				<h2> Robotic and Autonomous Systems Lab </h2>
+				</div>
+				<hr>
+				<div class = "subpage-section">
+					<h2> Robotic and Autonomous Systems Lab </h2>
 					<h3 class = "date"> (Sept - Dec 2025) </h3>
 					<p> 
 						<img id = "car" src = "images/car.jpg"> </img>
@@ -129,30 +136,36 @@ a img {
 						My partner and I built a fully autonomous glove-controlled car, designing and fabricating all our circuit boards from scratch, including a power distribution and motor driver board, a sensing board for speed control, 
 						an analog video demodulation board from scratch, and a flex sensor glove circuit, writing all of our own drivers in embedded C. Alongside drivers for each of our circuit boards, we also wrote Bluetooth firmware for 
 						RF transceivers for communication between the glove and the car, creating custom packets to send information.
-
-					<hr>
-				<h2> CPU Simulator in C++ (Computer Architecture)</h2>
+					</p>	
+				</div>
+				<!--  <hr>
+				<div class = "subpage-section">
+					<h2> CPU Simulator in C++ (Computer Architecture)</h2>
 					<h3 class = "date"> (Sept - Dec 2025) </h3>
 					<p> 
-						<br>
 						My group and I wrote a fully functional multicycle CPU simulator for the RISC-V ISA in C++, which executed RISC-V programs and gave correct results with accurate performance statistics.
 						Our implementation included a custom cache, 5-stage pipelining, full forwarding and stalls, 
 						and an always-not-taken branch prediction policy. 
-
-					<hr>
-				<h2> Electronic and Photonic Devices </h2>
+					</p>
+				</div> -->
+				<hr>
+				<div class = "subpage-section">
+					<h2> Electronic and Photonic Devices </h2>
 					<h3 class = "date"> (Sept - Dec 2024) </h3>
 					<p>
 						<img id = "wafer" src = "images/wafer.jpg"> </img>
 						<br>
 						I fabricated, tested, and characterized a chip on a silicon wafer with n-channel MOSFETs, photodiodes, resistor arrays, solar cells, ring oscillators, and NAND/NOR gates. 
 					</p>
-					<hr>
-				<h2> Shi Lab </h2>
+				</div>
+				<hr>
+				<div class = "subpage-section">
+					<h2> Shi Lab </h2>
 					<h3 class = "date"> (2020-2023) </h3>
 					<p>
 						I was a research intern at the Shi lab in UC San Diego's Bioengineering Department, where I used Raman spectroscopy to study lipid and protein metabolism in human muscle tissue and <i> Drosophila </i> ovaries. <a class="link" href="https://www.frontiersin.org/journals/aging/articles/10.3389/fragi.2021.819903/full"> Here is one publication from my time there. </a>
 					</p>
+				</div>		
 			</dialog>
 		</div>
 
@@ -255,29 +268,43 @@ a img {
 		<div class="subpage">
 			<dialog id="work">
 				<button id = "close" autofocus type="submit" onclick="document.getElementById('work').close()"> back </button>
-				<h1 id = "subpage-header"> work experience </h1>
-				<hr>
-				<h2> Figure Skating Coach </h2>
-					<h3 class = "date"> (Jan 2021 - Present) </h3>
-					<p> I've been coaching figure skaters for 4 years (and counting now). I teach all ages -- from tots to adults -- and all levels, from absolute beginners to regional competitors. I've choreographed group routines for my students. Coaching is always a highlight of my day, and it is such a privilege to get to share all the joy I have for my sport.
-				<hr>
-				<h2> Co-Captain - Princeton University Synchronized Skating Team </h2>
-					<h3 class = "date"> (May 2024 - Present) </h3>
-					<p> 
-						I am co-captain of Princeton's regionally recognized synchronized skating team. Along with running the team of 16 skaters, I also play a large role in running the larger figure skating club, which entails managing over 90 members (including recreational skaters and members of two competition teams), organizing 6 travel competitions and 2 professional shows, and helping to manage a budget of around $20,000.
-					</p>
-				<hr>
-				<h2> Service Focus Fellow </h2>
-					<h3 class = "date"> (Sept 2025 - Present) </h3>
-					<p> 
-						I am a junior fellow for Service Focus through Princeton's Pace Center for Civic Engagement for the "Perfect City" cohort, a group run by Aaron Landsman and inspired by his own <a class = "link" href="https://perfectcity.org/"> Perfect City </a> project, which is dedicated to showing city residents, especially kids, how to use their lived experiences to influence urban planning. As a fellow, I organize meetings and coordinate between our faculty, staff, and students.
-					</p>
-				<hr>
-				<h2> Princeton Outdoor Action Technical Skills Trainer </h2>
-					<h3 class = "date"> (Oct 2024 - Present) </h3>
-					<p> 
-						I am a technical skills trainer and leader with Princeton University's Outdoor Action program. As a leader, I lead 4-day backcountry orientation camping trips of 14-16 freshmen. As a technical skills trainer, I train prospective leaders in outdoors skills such as water filtration, tarping, and bear bagging.
-					</p>
+				<br> <br> <br>
+				<div class="subpage-section">
+					<h2> Figure Skating Coach </h2>
+						<h3 class = "date"> (Jan 2021 - Present) </h3>
+						<p> I've been coaching figure skaters for 4 years (and counting!). I teach all ages -- from tots to adults -- and all levels, from absolute beginners to regional competitors, and I also choreograph for my classes!
+							To identify and communicate balance and movement techniques which havelong been engrained into my muscle memory is no small feat, and I'm grateful for the opportunity to exercise this muscle.
+						</p>
+					<hr>
+				</div>
+				<div class="subpage-section">
+					<h2> Co-Captain - Princeton University Synchronized Skating Team </h2>
+						<h3 class = "date"> (May 2024 - Present) </h3>
+						<p> 
+							I am co-captain of Princeton's award-winning synchronized skating team. Along with running the team of 16 skaters, I also play a large role in running the larger figure skating club, which entails managing over 90 members (including recreational skaters and members of two competition teams), organizing 6 travel competitions and 2 professional shows, and helping to manage a budget of around $20,000.
+						</p>
+					<hr>
+				</div>
+				<div class="subpage-section">
+					<h2> Service Focus Fellow </h2>
+						<h3 class = "date"> (Sept 2025 - Present) </h3>
+						<p> 
+							I'm junior fellow for Service Focus through Princeton's Pace Center for Civic Engagement for the "Perfect City" cohort, a group run by Aaron Landsman and inspired by his own <a class = "link" href="https://perfectcity.org/"> Perfect City </a> project, which is dedicated to showing city residents, especially kids, how to use their lived experiences to influence urban planning. 
+							As part of Service Focus more broadly, I'm working on integrating service in the day-to-day life of myself and my peers.
+						</p>
+					<hr>
+				</div>
+				<div class="subpage-section">
+					<h2> Princeton Outdoor Action Technical Skills Trainer </h2>
+						<h3 class = "date"> (Oct 2024 - Present) </h3>
+						<p> 
+							I lead outdoor orientation trips for incoming freshmen!
+							I take groups of 14-16 pre-frosh on 4-day backcountry orientation camping trips, letting them know the real deal about Princeton before they dive into the academic year.
+							Throughout the school year, I teach technical skills to OA leaders-in-training and lead weekend day-hiking trips to promote the mental and physical benefits of the outdoors.
+							<br>
+							My own OA trip was what first got me into the outdors. I &#9825; OA!
+						</p>
+				</div>
 			</dialog>
 		</div>
 
