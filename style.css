@@ -52,7 +52,7 @@ saved: #9198e5, #a3caae
 body {
   height: 100vh;
 	color:#001405;
-  background: radial-gradient(#9ba3ff, #a9ffc1);
+  background: radial-gradient(#e2e6ff, #d0e7d7);
 	margin:0;
   display: flex;
   flex-direction: column;
@@ -380,6 +380,10 @@ input:focus, button:focus a:focus {
   z-index: 1;
 }
 
+#work img {
+  max-width: 25vw;
+}
+
 .yearly-art {
   display: flex;
   flex-direction: row;
@@ -439,7 +443,6 @@ input:focus, button:focus a:focus {
 }
 
 
-
 /* Hyperlinks */
 .link{
   color: inherit;
@@ -489,6 +492,13 @@ footer {
   position: relative;
   padding: 2vh;
   /* background: yellow; /* background color for debugging */
+}
+
+#updated {
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 0;
 }
 
 #disclaimer {
