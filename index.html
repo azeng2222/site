@@ -42,14 +42,13 @@ a img {
 	<main>
 		<div class = "header">
 			<h1 id="name">
-				<button id="name-button" class = "link" onclick="document.getElementById('main-desc').show()">
+				<button id="name-button" class = "link" onclick="toggleDialog('main-desc').show()">
 					audrey zeng
 				</button>
 			</h1>
 
 			<h2 id = "subtitle">
-				Electrical Engineering
-				<span id = "subtitle-less-imp">(at Princeton, for now)</span>
+				dedicated to the art of being unconventional &#9786;
 			</h2>
 
 		</div>
@@ -57,17 +56,17 @@ a img {
 		
 		<div class="main-desc-container">
 			<div class="main-sections">
-				<button id = "eng-button" class="link" onclick="document.getElementById('eng').showModal()"> engineering </button>
-				<button id = "art-button" class="link" onclick="document.getElementById('art').showModal()"> art </button>
-				<button id = "work-button" class="link" onclick="document.getElementById('work').showModal()"> other cool stuff! </button>
+				<button id = "eng-button" class="link" onclick="toggleDialog('eng').show()"> engineering </button>
+				<button id = "skating-button" class="link" onclick="toggleDialog('skating').show()"> skating </button>
+				<button id = "sketchbook-button" class="link" onclick="toggleDialog('sketchbook').show()"> sketchbook </button>
+				<button id = "gallery-button" class="link" onclick="document.getElementById('gallery').showModal()"> gallery </button>
+				<button id = "other-button" class="link" onclick="toggleDialog('other').show()"> other </button>
 			</div>
 
 			<dialog id="main-desc">
 				<p> 
-					Hi, I'm Audrey! I'm a senior at Princeton majoring in Electrical Engineering with a concentration in optics and photonics.
-					<br> <br>
-					I'm particularly interested in light and communications, on both a scientific and visual level.
-					I'm currently working with both in Princeton's <a class = "link" href="https://prucnal.princeton.edu/">Lightwave Communications Research Lab</a> under Paul Prucnal.
+					Hi, I'm Audrey! I'm a senior at Princeton majoring in Electrical Engineering with a concentration in optics and photonics and a side interest in comms.
+					I'm currently working in Princeton's <a class = "link" href="https://prucnal.princeton.edu/">Lightwave Communications Research Lab</a> under Paul Prucnal.
 					<br> <br>
 					There's a lot I love outside of engineering too! 
 					I love to learn more about the world, and I think it's important to do so through many different domains.
@@ -80,21 +79,11 @@ a img {
 				<div id = "pictures" >
 					<img id="potato-chip" src="images/potato-chip.jpg" alt="three girls hugging and standing on a thin slab of rock jutting out from a mountain"> </img>
 					<img id="kaaterskills" src="images/kaaterskills.jpg" alt="two girls hugging, standing in front of a frozen waterfall"> </img>
-					<img id="skating" src="images/skating.jpg" alt="a girl in a blue figure skating dress in a spotlight, holding her leg up in a split behind her"> </img>
+					<img id="skating-img" src="images/skating.jpg" alt="a girl in a blue figure skating dress in a spotlight, holding her leg up in a split behind her"> </img>
 				</div>
-				</dialog>
+			</dialog>
 
-		</div>
-
-		<div class="subpage">
 			<dialog id="eng">
-				<button id = "close" autofocus type="submit" onclick="document.getElementById('eng').close()"> back </button>
-				<!-- <h1 id = "subpage-header"> engineering experience </h1> -->
-				<h1 id = "subpage-subheader">
-					<b>Programming Languages:</b> Python, MATLAB, Java, C++, Bash, HTML, CSS, Embedded C <br>	
-					<b>Tools and Systems: </b> Unix, iPerf, tcpdump, Wireshark, KiCad, Arduino, Git, Circuit Design, Adobe Photoshop, Adobe Illustrator
-				</h1>
-				<hr>
 				<!-- <div class = "subpage-section">
 					<h2> Software Defined Radio </h2>
 					<p> 
@@ -102,240 +91,97 @@ a img {
 					</p>
 				</div>
 				<hr> -->
-				<div class = "subpage-section">
-					<h2> MIT Lincoln Labs: Network Analysis </h2>
-					<h3 class = "date"> (summer 2026) </h3>
-					<p> 
-						I'm analyzing satellite networks communications!
-					</p>
+				<h2> Research and Work </h2>
+				<div id="eng-images">
+					<img id = "lab" src = "images/lab.jpg"> </img>
 				</div>
-				<hr>	
-				<div class = "subpage-section">
-					<h2> Embedded Systems </h2>
-					<h3 class = "date"> (spring 2026) </h3>
-					<p> 
-						<img id = "pcb" src = "images/pcb.JPEG"> </img>
+				<h3> 2026-: Princeton Lightwave Communications Laboratory (PI: Paul Prucnal) </h3>
+				<p> 
+					Senior thesis research on using photonic neural networks (PNNs) for analog signal processing.
+					Investigating the use of PNNs for compensation of nonlinearities in wireless channels.
+				</p>
+				<h3> Summer '26: MIT Lincoln Laboratory </h3>
+				<p> Research internship analyzing satellite communication networks.
+				</p>
+
+				<h3> Summer '25: Starlink </h3>
+				<p> 
+					Developed Starlink Global Enterprise Sales&apos;s first testing and reporting suite for network performance, 
+					implementing a test lab and network. 
+					With this test suite, I collaborated with external networking vendors to certify joint product offerings.
+					<br> Also, met some of the coolest people ever.
+					<br>
+					&#10051; <a class = "link" href="https://www.linkedin.com/in/audreyzeng/"> My mentor's endorsement. </a>
+				</p>
+
+				<h3> 2024-2025: Princeton University Laser Sensing (PULSe) Lab (PI: Gerard Wysocki) </h3>
+					<p> I designed optical systems with RF circuits to stabilize Quantum Cascade Laser Frequency Combs, designing a double PID loop to control the amplitude modulation of an externally-injected RF signal. For more details,
 						<br>
-						My team & I designed, built, and programmed boards which send signals to each other. This one receives a signal from the other (which I can't find a picture of), and will
-						drive the car motors it's on depending on IMU data from the other. It also powers an LED strips and makes the other play a funny noise if the 
-						car bumper is hit.
+						&#10051; <a class = "link" href="https://doi.org/10.1364/CLEO_AT.2025.AA122_3"> Our CLEO publication. </a>
 					</p>
-				</div>
-				<hr>				
-				<div class = "subpage-section">
-					<h2> Starlink </h2>
-					<h3 class = "date"> (May - Aug 2025) </h3>
-					<p> 
-						As an engineering intern on the Sales Architecture Team, I developed Starlink Global Enterprise Sales&apos;s first testing and reporting suite for network performance, 
-						implementing a test lab and network using UNIX system tools (iperf, tcpdump, ping), Python, routing and switching protocols. 
-						With this test suite, I inaugurated collaboration with external networking vendors to certify joint product offerings.
-						<a class = "link" href="https://www.linkedin.com/in/audreyzeng/"> Read my mentor's endorsement here. </a>
-					</p>
-				</div>
-				<hr>
-				<div class = "subpage-section">
-					<h2> Princeton University Laser Sensing (PULSe Lab) </h2>
-					<h3 class = "date"> (Feb 2024 - May 2025) </h3>
-					<p> 
-						<a href="298zeng.pdf"> <img id = "298-poster" src = "images/iw-poster.png"> </img> </a>
-						<a href="297-poster.pdf"> <img id = "297-poster" src = "images/297-poster-img.png"> </img> </a>
-						<img id = "lab" src = "images/lab.jpg"> </img>
-						<br>
-						As an undergraduate researcher at the PULSe lab under Dr. Gerard Wysocki, I designed optical systems with RF circuits to stabilize Quantum Cascade Laser Frequency Combs, designing a double PID loop to control the amplitude modulation of an externally-injected RF signal. For more details,
-						<a class = "link" href="Zeng_Audrey.pdf"> read my full report here, </a> or read <a class = "link" href="https://doi.org/10.1364/CLEO_AT.2025.AA122_3"> our publication in the CLEO 2025 proceedings here. </a>
-					</p>
-				</div>
-				<hr>
-				<div class = "subpage-section">
-					<h2> Robotic and Autonomous Systems Lab </h2>
-					<h3 class = "date"> (Sept - Dec 2025) </h3>
-					<p> 
-						<img id = "car" src = "images/car.jpg"> </img>
-						<img id = "glove" src = "images/glove.jpg"> </img>
-						<br>
-						My partner and I built a fully autonomous glove-controlled car, designing and fabricating all our circuit boards from scratch, including a power distribution and motor driver board, a sensing board for speed control, 
-						an analog video demodulation board from scratch, and a flex sensor glove circuit, writing all of our own drivers in embedded C. Alongside drivers for each of our circuit boards, we also wrote Bluetooth firmware for 
-						RF transceivers for communication between the glove and the car, creating custom packets to send information.
-					</p>	
-				</div>
-				<!--  <hr>
-				<div class = "subpage-section">
-					<h2> CPU Simulator in C++ (Computer Architecture)</h2>
-					<h3 class = "date"> (Sept - Dec 2025) </h3>
-					<p> 
-						My group and I wrote a fully functional multicycle CPU simulator for the RISC-V ISA in C++, which executed RISC-V programs and gave correct results with accurate performance statistics.
-						Our implementation included a custom cache, 5-stage pipelining, full forwarding and stalls, 
-						and an always-not-taken branch prediction policy. 
-					</p>
-				</div> -->
-				<hr>
-				<div class = "subpage-section">
-					<h2> Electronic and Photonic Devices </h2>
-					<h3 class = "date"> (Sept - Dec 2024) </h3>
+
+				<h3> 2020-2022: Shi Lab </h2>
 					<p>
-						<img id = "wafer" src = "images/wafer.jpg"> </img>
-						<br>
-						I fabricated, tested, and characterized a chip on a silicon wafer with n-channel MOSFETs, photodiodes, resistor arrays, solar cells, ring oscillators, and NAND/NOR gates. 
+						With the Shi lab in UC San Diego's Bioengineering Department, I studied lipid and protein metabolism in human muscle tissue and <i> Drosophila </i> ovaries
+						using Raman spectroscopy.
+						<br> 
+						&#10051; <a class="link" href="https://www.frontiersin.org/journals/aging/articles/10.3389/fragi.2021.819903/full"> One publication from my time there. </a>
 					</p>
+				<br> <br> 
+
+				<h2> Classes </h2>
+				<div id="eng-images">
+					<img id = "pcb" src = "images/pcb.JPEG"> 
+					<img id = "car" src = "images/car.jpg"> </img>
+					<img id = "glove" src = "images/glove.jpg"> </img>
+					<img id = "wafer" src = "images/wafer.jpg"> </img>
 				</div>
+				<h3> Spring '26: Embedded Systems </h3>
+				<p> Designed two mixed-signal PCBs for control of a remote car.
+					Both powered from 9.6V batteries with RF communication capabilities.
+					Controller board sends motor control commands to the car depending on IMU data.
+					Both drive custom-programmed LED strips. Compute done on a custom-programmed STM32 MCU.
+				</p>
+				<h3> Fall '25: Computer Architecture </h3>
+				<p> Simulated a multicycle CPU for the RISC-V ISA in C++, which executed RISC-V programs and gave performance statistics.
+					Included a custom cache, 5-stage pipelining and full forwarding and stalls. </p>
+				<h3> Fall '25: Robotic and Autonomous Systems Lab </h3>
+				<p>
+					Built a fully autonomous car with a glove for remote control. Designed and fabricated a power distribution and motor driver board, a sensing board for speed control, 
+					an analog video demodulation board, and a flex sensor glove circuit. Wrote all of our own drivers in embedded C for a PSOC MCU. 
+					Wrote BLE firmware for communication between the glove and the car.
+				</p>
+				<h3> Fall '24: Electronic and Photonic Devices </h3>
+				<p> Fabricated, tested, and characterized a chip on a silicon wafer with n-channel MOSFETs, 
+					photodiodes, resistor arrays, solar cells, ring oscillators, and NAND/NOR gates. 
+				</p>
+			</dialog>
+
+			<dialog id="skating">
+				<h2> Figure Skating Coach </h2>
+					<h3 class = "date"> (Jan 2021 - Present) </h3>
+					<p> I've been coaching figure skaters for 4 years (and counting!). I teach all ages -- from tots to adults -- and all levels, from absolute beginners to regional competitors, and I also choreograph for my classes!
+						To identify and communicate balance and movement techniques which havelong been engrained into my muscle memory is no small feat, and I'm grateful for the opportunity to exercise this muscle.
+					</p>
 				<hr>
-				<div class = "subpage-section">
-					<h2> Shi Lab </h2>
-					<h3 class = "date"> (2020-2023) </h3>
-					<p>
-						I was a research intern at the Shi lab in UC San Diego's Bioengineering Department, where I used Raman spectroscopy to study lipid and protein metabolism in human muscle tissue and <i> Drosophila </i> ovaries. <a class="link" href="https://www.frontiersin.org/journals/aging/articles/10.3389/fragi.2021.819903/full"> Here is one publication from my time there. </a>
+				<h2> Co-Captain - Princeton University Synchronized Skating Team </h2>
+					<h3 class = "date"> (May 2024 - Present) </h3>
+					<p> 
+						I am co-captain of Princeton's award-winning synchronized skating team. Along with running the team of 16 skaters, I also play a large role in running the larger figure skating club, which entails managing over 90 members (including recreational skaters and members of two competition teams), organizing 6 travel competitions and 2 professional shows, and helping to manage a budget of around $20,000.
 					</p>
-				</div>		
+				<hr>
 			</dialog>
-		</div>
 
-		<div class="subpage">
-			<dialog id="art">
-				<button id = "close" autofocus type="submit" onclick="document.getElementById('art').close()"> back </button>
-				<!-- <h1 id = "subpage-header"> art </h1> -->
-
-				<h1 id = "subpage-subheader"> select pieces. more to come... </h1>
-
-				<h2> 2026 </h2>
-				<div class = "yearly-art">
-					<figure id="peephole" class="watermark"> 
-						<img src="art/peephole-small.gif"> </img> 
-						<figcaption> paper, pen, jewelry box, 2"x3" </figcaption>
-					</figure>
-				</div>
-				
-				<h2> 2025 </h2>
-				<div class = "yearly-art">
-					<figure id="cat" class="watermark"> 
-						<img src="art/rainbow-cat.jpg"> </img> 
-						<figcaption> oil pastel on paper, 8.5"x11" </figcaption>
-					</figure>
-					<figure id="light-thru-trees" class="watermark"> 
-						<img src="art/sunlight.jpg"> </img> 
-						<figcaption> acrylic on canvas, 11"x14" </figcaption>
-					</figure>
-
-					<figure id="knees" class="watermark"> 
-						<img src="art/knees.JPEG"> </img> 
-						<figcaption> charcoal, colored pencil on paper 5"x7" </figcaption>
-					</figure>
-
-					<figure id="dad-burger" class="watermark"> 
-						<img src="art/burger.JPEG"> </img> 
-						<figcaption> colored pencil on paper, 7"x5" (maybe?) </figcaption>
-					</figure>
-
-					<!-- I don't like this piece -- may add back later
-					<figure id="adjusting bow" class="watermark"> 
-						<img src="art/bow.JPEG"> </img> 
-						<figcaption> colored pencil on paper, 5"x7" (maybe?) </figcaption>
-					</figure> -->
-
-				</div>
-
-				<h2> 2024 </h2>
-				<div class = "yearly-art">
-					<figure id="mom-cat-painting" class="watermark"> 
-						<img src="art/mom-cat-painting.jpg"> </img> 
-						<figcaption> acrylic on canvas, 12"x14" (maybe?) </figcaption>
-					</figure>
-
-					<figure id="still-life" class="watermark"> 
-						<img src="art/still-life.jpg"> </img> 
-						<figcaption> charcoal on paper, 12"x16" (maybe?) </figcaption>
-					</figure>
-				</div>
-
-				<h2> 2023 </h2>
-				<div class = "yearly-art">
-					<figure id="shadow" class="watermark">
-						<img src="art/shadow-box.jpg"> </img>
-						<figcaption> (1/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
-					</figure>
-
-					<figure id="shadow" class="watermark">
-						<img src="art/shadow-1.jpg" > </img>
-						<figcaption> (2/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
-					</figure>
-
-					<figure id="shadow" class="watermark">
-						<img src="art/shadow-2.jpg"> </img>
-						<figcaption> (3/3) old receipts and brochures on cardboard housing a starbucks cup with a cut out brochure taped to the inside. when light shines, one sees the shadow of a tree.</figcaption>
-					</figure>
-					
-					<figure id="tambi" class="watermark"> 
-						<img src="art/tambi.jpg"> </img> 
-						<figcaption> Adobe Photoshop illustration, 1920 x 3160 px </figcaption>
-					</figure>
-
-					<figure id="cat" class="watermark"> 
-						<img src="art/cat.jpg"> </img> 
-						<figcaption> colored pencil on paper, 15.5"x9" </figcaption>
-					</figure>
-
-					<figure id="terminal" class="watermark"> 
-						<img src="art/terminal.jpg"> </img> 
-						<figcaption> acrylic on canvas, 12"x12" </figcaption>
-					</figure>
-
-					<figure id="reaching" class="watermark"> 
-						<img src="art/reaching.jpg"> </img> 
-						<figcaption> acrylic on canvas, 12"x15.5" </figcaption>
-					</figure>
-				</div>
-				
-				<h2> 2022 </h2>
-				<div class = "yearly-art">
-					<figure id="boy" class="watermark"> 
-						<img src="art/boy.jpg"> </img> 
-						<figcaption> Adobe Photoshop illustration, 3160x3160 px </figcaption>
-					</figure>
-
-					<figure id="on-top" class="watermark"> 
-						<img src="art/on-top.jpg"> </img> 
-						<figcaption> colored pencil on paper, 13"x12.5" </figcaption>
-					</figure>
-
-					<figure id="ghosts" class="watermark"> 
-						<img src="art/ghosts.jpg"> </img> 
-						<figcaption> colored pencil on paper, 14"x13" </figcaption>
-					</figure>
-
-					<figure id="mirror" class="watermark"> 
-						<img src="art/mirror.jpg"> </img> 
-						<figcaption> colored pencil on paper, 13"x12.5" </figcaption>
-					</figure>
-				</div>
-
+			<dialog id="sketchbook">
+				<p> under construction... </p>
 			</dialog>
-		</div>
 
-		<div class="subpage">
-			<dialog id="work">
-				<button id = "close" autofocus type="submit" onclick="document.getElementById('work').close()"> back </button>
-				<br> <br> <br>
+			<dialog id="other">
 				<div class="subpage-section">
 					<h2> Animation! </h2>
 						<h3 class = "date"> (spring 2026) </h3>
 						<p> Watch <a class = "link" href = "https://youtu.be/F9HU_OQ2_hw"> my 2D animation </a> that I made in a week while working a 9-5 internship!
 							Or, read my <a class = "link" href="Zeng - Rigging Compendium.pdf"> read my comprehensive 60-page guide on rigging a 3D animated character. </a>
-						</p>
-					<hr>
-				</div>
-				
-				<div class="subpage-section">
-					<h2> Figure Skating Coach </h2>
-						<h3 class = "date"> (Jan 2021 - Present) </h3>
-						<p> I've been coaching figure skaters for 4 years (and counting!). I teach all ages -- from tots to adults -- and all levels, from absolute beginners to regional competitors, and I also choreograph for my classes!
-							To identify and communicate balance and movement techniques which havelong been engrained into my muscle memory is no small feat, and I'm grateful for the opportunity to exercise this muscle.
-						</p>
-					<hr>
-				</div>
-				<div class="subpage-section">
-					<h2> Co-Captain - Princeton University Synchronized Skating Team </h2>
-						<h3 class = "date"> (May 2024 - Present) </h3>
-						<p> 
-							I am co-captain of Princeton's award-winning synchronized skating team. Along with running the team of 16 skaters, I also play a large role in running the larger figure skating club, which entails managing over 90 members (including recreational skaters and members of two competition teams), organizing 6 travel competitions and 2 professional shows, and helping to manage a budget of around $20,000.
 						</p>
 					<hr>
 				</div>
@@ -375,6 +221,94 @@ a img {
 						</p>
 				</div>
 			</dialog>
+
+
+		</div>
+
+		<div class="subpage">
+			<dialog id="gallery">
+				<button id = "close" autofocus type="submit" onclick="document.getElementById('gallery').close()"> back </button>
+				<h1 id = "subpage-subheader"> select pieces </h1>
+				<figure id="rainbow-cat" class="watermark"> 
+					<img src="art/rainbow-cat.jpg"> </img> 
+					<figcaption> oil pastel on paper, 11"x8.5", 2025 </figcaption>
+				</figure>
+
+				<figure id="cat" class="watermark"> 
+					<img src="art/cat.jpg"> </img> 
+					<figcaption> colored pencil on paper, 15.5"x9", 2023 </figcaption>
+				</figure>
+
+				<figure id="still-life" class="watermark"> 
+					<img src="art/still-life.jpg"> </img> 
+					<figcaption> charcoal on paper, 15"x20", 2024 </figcaption>
+				</figure>
+
+				<figure id="mom-cat-painting" class="watermark"> 
+					<img src="art/mom-cat-painting.jpg"> </img> 
+					<figcaption> acrylic on canvas, 12"x14", 2024 </figcaption>
+				</figure>
+
+				<figure id="light-thru-trees" class="watermark"> 
+					<img src="art/sunlight.jpg"> </img> 
+					<figcaption> acrylic on canvas, 11"x14", 2025 </figcaption>
+				</figure>
+
+				<figure id="knees" class="watermark"> 
+					<img src="art/knees.JPEG"> </img> 
+					<figcaption> charcoal, colored pencil on paper 5"x7", 2025 </figcaption>
+				</figure>
+
+				<figure id="dad-burger" class="watermark"> 
+					<img src="art/burger.JPEG"> </img> 
+					<figcaption> colored pencil on paper, 7"x5", 2025 </figcaption>
+				</figure>
+
+				<figure id="shadow" class="watermark">
+					<img src="art/shadow-box.jpg"> </img>
+					<img src="art/shadow-1.jpg" > </img>
+					<img src="art/shadow-2.jpg"> </img>
+					<figcaption> old receipts and brochures on cardboard housing a starbucks 
+						cup with a cut out brochure taped to the inside. when light shines, 
+						one sees the shadow of a tree. 2023</figcaption>
+				</figure>
+
+				<figure id="tambi" class="watermark"> 
+					<img src="art/tambi.jpg"> </img> 
+					<figcaption> Adobe Photoshop illustration, 1920 x 3160 px, 2023 </figcaption>
+				</figure>
+
+				<figure id="reaching" class="watermark"> 
+					<img src="art/reaching.jpg"> </img> 
+					<figcaption> acrylic on canvas, 12"x15.5", 2023 </figcaption>
+				</figure>
+
+				<figure id="terminal" class="watermark"> 
+					<img src="art/terminal.jpg"> </img> 
+					<figcaption> acrylic on canvas, 12"x12", 2023 </figcaption>
+				</figure>
+
+				<figure id="on-top" class="watermark"> 
+					<img src="art/on-top.jpg"> </img> 
+					<figcaption> colored pencil on paper, 13"x12.5", 2022 </figcaption>
+				</figure>
+
+				<figure id="boy" class="watermark"> 
+					<img src="art/boy.jpg"> </img> 
+					<figcaption> Adobe Photoshop illustration, 3160x3160 px, 2022 </figcaption>
+				</figure>
+
+				<figure id="ghosts" class="watermark"> 
+					<img src="art/ghosts.jpg"> </img> 
+					<figcaption> colored pencil on paper, 14"x13", 2022 </figcaption>
+				</figure>
+
+				<figure id="mirror" class="watermark"> 
+					<img src="art/mirror.jpg"> </img> 
+					<figcaption> colored pencil on paper, 13"x12.5", 2022 </figcaption>
+				</figure>
+
+			</dialog>
 		</div>
 
 		<!-- random text?
@@ -386,17 +320,21 @@ a img {
 		-->
 
 	</main>
-</body>
 
-<footer>
-	<p id="updated"> updated sept 3, 2026 </p>
-	<div id="socials"> 
-		<a class="link" href="https://www.goodreads.com/theawesomeaudy"> goodreads </a>
-		<a class="link" href="https://monkeytype.com/profile/oddgumball"> monkeytype </a>
-		<a class="link" href="https://www.linkedin.com/in/audreyzeng"> linkedin </a>
-		<a class="link" href="mailto: contact@azng.dev"> email </a>
-	</div>
-	<!-- disclaimer <p id = "disclaimer"> Coded in 3 days. From scratch, by me, without AI (kind of). </p> -->
-</footer>
+	<footer>
+		<div id="socials"> 
+			<a class="link" href="https://www.goodreads.com/theawesomeaudy"> goodreads </a>
+			<a class="link" href="https://monkeytype.com/profile/oddgumball"> monkeytype </a>
+			<a class="link" href="https://www.linkedin.com/in/audreyzeng"> linkedin </a>
+			<a class="link" href="https://scholar.google.com/citations?user=lIBCbRUAAAAJ&hl=en&oi=ao"> google scholar </a>
+			<a class="link" href="mailto: contact@azng.dev"> email </a>
+		</div>
+		<p id="updated"> updated sept 3, 2026 </p>
+		<!-- disclaimer <p id = "disclaimer"> Coded in 3 days. From scratch, by me, without AI (kind of). </p> -->
+	</footer>
+
+	<script src="script.js"></script>
+
+</body>
 
 </html>
